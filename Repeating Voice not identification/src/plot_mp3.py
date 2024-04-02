@@ -37,5 +37,7 @@ def plot_audio_waveform(audio_file):
     # Show the Plotly figure
     fig.show()
 
-# Replace 'your_audio_file.mp3' with the path to your audio file
-plot_audio_waveform('output2.mp3')
+
+if __name__ == "__main__":
+    # Replace 'your_audio_file.mp3' with the path to your audio file
+    plot_audio_waveform('output2.mp3')

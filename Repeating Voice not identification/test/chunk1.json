@@ -1,0 +1,67 @@
+{
+    "text": " I am going to Mumbai tomorrow.",
+    "segments": [
+        {
+            "id": 0,
+            "seek": 0,
+            "start": 0.4,
+            "end": 1.76,
+            "text": " I am going to Mumbai tomorrow.",
+            "tokens": [
+                50364,
+                286,
+                669,
+                516,
+                281,
+                34309,
+                4153,
+                13,
+                50464
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.497512674331665,
+            "compression_ratio": 0.8333333333333334,
+            "no_speech_prob": 0.011390091851353645,
+            "confidence": 0.76,
+            "words": [
+                {
+                    "text": "I",
+                    "start": 0.4,
+                    "end": 0.72,
+                    "confidence": 0.657
+                },
+                {
+                    "text": "am",
+                    "start": 0.72,
+                    "end": 0.82,
+                    "confidence": 0.703
+                },
+                {
+                    "text": "going",
+                    "start": 0.82,
+                    "end": 0.96,
+                    "confidence": 0.693
+                },
+                {
+                    "text": "to",
+                    "start": 0.96,
+                    "end": 1.12,
+                    "confidence": 0.889
+                },
+                {
+                    "text": "Mumbai",
+                    "start": 1.12,
+                    "end": 1.42,
+                    "confidence": 0.836
+                },
+                {
+                    "text": "tomorrow.",
+                    "start": 1.42,
+                    "end": 1.76,
+                    "confidence": 0.807
+                }
+            ]
+        }
+    ],
+    "language": "en"
+}

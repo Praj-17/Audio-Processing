@@ -79,7 +79,7 @@ class TrascribeSRT():
     
     return os.path.join( os.path.dirname(mp3_file), f'{destination_language}.srt')
   
-  def transcribe_srt(self, mp3_file):
+  def transcribe(self, mp3_file):
     #use the WhisperModel to transcribe the mp3 file
     audio = whisper.load_audio(mp3_file)
     # results = self.model.transcribe(mp3_file, beam_size=5)
@@ -121,8 +121,21 @@ class TrascribeSRT():
 
     print('Translation Complete')
 
+  def transcribe_folder(self, folder_path):
+    """
+    Iterates through all MP3 files in the given folder,
+    runs a function on each, collects the outputs, and returns the list.
+    """
+    results = []
+    for root, dirs, files in os.walk(folder_path):
+        for file in files:
+            if file.endswith(".mp3"):
+                full_path = os.path.join(root, file)
+                result = self.transcribe(full_path)
+                results.append(result)
+    return results
 if __name__ == "__main__":
     print("Transcribing the video now....This may take a while on CPU")
     ts = TrascribeSRT()
-    results = ts.transcribe_srt(r'test\chunk0.mp3')
-    print(results)
+    results = ts.transcribe_folder(r'test/')
+    
